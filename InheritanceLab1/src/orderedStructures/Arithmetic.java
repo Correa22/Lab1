@@ -30,5 +30,16 @@ public class Arithmetic extends Progression {
 	public String toString() {
 		return "Ari("+ super.firstValue() + ", " + this.nextValue()+ " )"; 
 	}
-	
+	public Progression add(Arithmetic p2) {
+		double newFirst = this.firstValue() + p2.firstValue();
+		double newDiff = this.commonDifference + p2.commonDifference;
+		Progression newP = new Arithmetic(newFirst,newDiff);
+		return newP;		
+	}
+	public Progression subs(Arithmetic p2) {
+		double newFirst = this.firstValue() - p2.firstValue();
+		double newDiff = this.commonDifference - p2.commonDifference;
+		Progression newP = new Arithmetic(newFirst,newDiff);
+		return newP;
+	}
 }

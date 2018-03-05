@@ -30,5 +30,7 @@ public class Fibonacci extends Progression {
 		prev = 0; 
 		return value; 
 	}
-
+	public String toString() {
+		return "Fibo("+ super.firstValue() + ", " + this.nextValue()+ " )"; 
+	}
 }
